@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- Style -->
+    <link rel="shortcut icon" type="image/png" href="assets/images/trainfavicon.ico" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <!-- jQuery -->
@@ -24,7 +25,68 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1> <i class="fas fa-train"></i><a href="index.html"> Train Schedule Tracker</a></h1>
+            <h3>Track Your Next Destination</h3>
+        </div> <!--jumbotron close-->
 
+        <div class="row">
+            <div class="col-md-12">
+                <!--train schedule-->
+                <div class="card mb-4">
+                    <div class="card-header"><i class="fas fa-calendar"></i> Current Train Schedule</div>
+                    <div class="card-body">
+                        <table class="table table-sm table-hover" id="train-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row close -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Add Train -->
+                <div class="card mb-4">
+                    <div class="card-header"><i class="fas fa-plus-square"></i> Add Your Train</div>
+                    <div class="card-body">
+                        <!-- Input Form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="train-name-input">Train Name</label>
+                                <input type="text" id="train-name-input" placeholder="Train A" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="destination-input">Destination</label>
+                                <input type="text" id="destination-input" placeholder="Lakewood" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="train-time-input">First Train Time (HH:MM - military time)</label>
+                                <input type="text" id="train-time-input" placeholder="15:00" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="frequency-input">Frequency (min)</label>
+                                <input type="text" id="frequency-input" placeholder="15" class="form-control">
+                            </div>
+                            <button class="btn btn-primary" id="add-train-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- container close -->
+    </div>
 </body>
-
 </html>
