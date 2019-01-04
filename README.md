@@ -18,3 +18,6 @@
     * This app calculates when the next train will arrive, relative to current time
     
     * Users from many different machines are able to view these same train times
+
+Deployed site:
+https://giantrotta24.github.io/Train-Schedule/
